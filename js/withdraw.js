@@ -18,6 +18,8 @@ document.getElementById('btn-withdrow').addEventListener('click', function() {
     const newWithDrowAmountSting = withdrowField.value;
     const newWithdrowAmount = parseFloat(newWithDrowAmountSting);
     console.log(typeof newWithdrowAmount);
+    //step7
+    withdrowField.value = "";
     if (isNaN(newWithdrowAmount)) {
         alert('Please provide a valid Amount:');
         return;
@@ -37,8 +39,7 @@ document.getElementById('btn-withdrow').addEventListener('click', function() {
     const previcesTotalSting = balanceTotalElement.innerText;
     const priviuseBalanceTotal = parseFloat(previcesTotalSting);
 
-    //step7
-    withdrowField.value = "";
+
     if (newWithdrowAmount > priviuseBalanceTotal) {
         alert('Bapper Bank a Ato Taka Nai ');
         return;
